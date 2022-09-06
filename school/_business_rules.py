@@ -1,4 +1,4 @@
-from school.connect_to_database import ConnectToDataBase, JobConfig
+from database.connect_to_database import ConnectToDataBase, JobConfig
 import datetime
 
 
