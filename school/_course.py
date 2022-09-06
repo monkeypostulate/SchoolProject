@@ -1,5 +1,5 @@
 from school.event import Event
-from school.connect_to_database import ConnectToDataBase
+from database.connect_to_database import ConnectToDataBase
 from datetime import datetime
 
 
