@@ -1,4 +1,4 @@
-from school.connect_to_database import ConnectToDataBase
+from database.connect_to_database import ConnectToDataBase
 from school._business_rules import ValidateStudentCourseInfo
 
 
