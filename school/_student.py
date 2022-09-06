@@ -1,5 +1,5 @@
 from school.person import Person
-from school.connect_to_database import ConnectToDataBase
+from database.connect_to_database import ConnectToDataBase
 
 
 
