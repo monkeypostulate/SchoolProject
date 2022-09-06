@@ -11,7 +11,7 @@ Author: Abel Camacho Guardian
 
 ### Database
 
-The database is done in BigQuery. An advantage of BigQuery is that it allows for fast reading of large datasets.
+The database is done in BigQuery, and the files to create the tables are in the file create_database. An advantage of BigQuery is that it allows for fast reading of large datasets.
 However, tables are not allow to have primary keys. 
 Thus, the logic to define unique ids (e.g. student_id, course_id) is done in the school module.
 
@@ -30,6 +30,7 @@ The table grade has the relationship between numeric and alphabetic grades.
 ![image](https://user-images.githubusercontent.com/25433668/188496250-d35a3b9d-8cac-4fcb-a980-5c8374aec49b.png)
 
 
+
 ### Module school
 
 The module school contains the classes and methods used for the API.
@@ -37,6 +38,9 @@ The module school contains the classes and methods used for the API.
 In the file example, we show how we can create students and courses.
 We also show how to add students to a course, or add a grade to a student.
 
+### Module database
+
+The module database has all the functionalities to connect to the database.
 
 
 ### School API
@@ -52,4 +56,10 @@ The tests are found in the folder tests. Currently, we only have tests for the b
 For instance, we test if our method to restrict a student to attend two courses that occur at the same time works according to our logic.
 A challenge in this section was to create my first tests, since I haven't done any unittesting before at work or during my studies.
 
+```
+pytest -q test_business_rules.py
+```
+Currently, there are 19 tests.
+<br>
+![image](https://user-images.githubusercontent.com/25433668/188721697-6ff25a0f-757e-4ad9-b81a-f1589c8d150f.png)
 
