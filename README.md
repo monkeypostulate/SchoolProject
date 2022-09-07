@@ -27,8 +27,7 @@ The grade of a student is in the table student_grade, and the grade is a string,
 The table grade has the relationship between numeric and alphabetic grades.
 
 
-![image](https://user-images.githubusercontent.com/25433668/188496250-d35a3b9d-8cac-4fcb-a980-5c8374aec49b.png)
-
+![image](https://user-images.githubusercontent.com/25433668/188918168-7e86d037-82c8-4001-905d-7b47a96b3d25.png)
 
 
 ### Module school
@@ -62,4 +61,25 @@ pytest -q test_business_rules.py
 Currently, there are 19 tests.
 <br>
 ![image](https://user-images.githubusercontent.com/25433668/188721697-6ff25a0f-757e-4ad9-b81a-f1589c8d150f.png)
+
+
+#### Examples of API
+
+Student information can be retrieved as follow:
+```
+http://localhost:8787/api/v1/resources/student/info?student_id=1
+```
+Results is a json file.
+If there is a student with the given student_id, then the results looks like
+
+![image](https://user-images.githubusercontent.com/25433668/188919457-9f801a5e-1121-4f53-9917-2b8d340d5bb8.png)
+
+If there is no student, then we get an empty set.
+
+![image](https://user-images.githubusercontent.com/25433668/188919149-7ed3f666-02e4-4904-bcfa-a98e9bb9a15f.png)
+
+
+Othe functionalities of the API are get all courses from a student, get the average grade of a student, and get the grade of a course.
+It is aslo possible to create a student, update the information of a student, and also create a course.
+
 
