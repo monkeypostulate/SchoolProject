@@ -27,8 +27,7 @@ The grade of a student is in the table student_grade, and the grade is a string,
 The table grade has the relationship between numeric and alphabetic grades.
 
 
-![image](https://user-images.githubusercontent.com/25433668/188918168-7e86d037-82c8-4001-905d-7b47a96b3d25.png)
-
+![image](https://user-images.githubusercontent.com/25433668/188940537-936b575f-2e23-47c9-aa71-e24f3b5fe184.png)
 
 ### Module school
 
@@ -66,20 +65,60 @@ Currently, there are 19 tests.
 #### Examples of API
 
 Student information can be retrieved as follow:
+
 ```
-http://localhost:8787/api/v1/resources/student/info?student_id=1
+http://localhost:8787/school-api/v1/student/data?student_id=11
 ```
+
 Results is a json file.
 If there is a student with the given student_id, then the results looks like
 
-![image](https://user-images.githubusercontent.com/25433668/188919457-9f801a5e-1121-4f53-9917-2b8d340d5bb8.png)
+![image](https://user-images.githubusercontent.com/25433668/188947099-3de50142-8709-48bf-b736-1df08edf0792.png)
 
 If there is no student, then we get an empty set.
 
-![image](https://user-images.githubusercontent.com/25433668/188919149-7ed3f666-02e4-4904-bcfa-a98e9bb9a15f.png)
+![image](https://user-images.githubusercontent.com/25433668/188947317-36a8ca92-d8b5-4308-970d-f5dea05a1fed.png)
+
+If the wrong parameter is provided, the following error occurs:
+![image](https://user-images.githubusercontent.com/25433668/188947512-801a5df5-d3c1-4836-893f-968e4ab55806.png)
+
+Othe functionalities of the API are
+
+* Get all courses from a student
+```
+http://localhost:8787/school-api/v1/student/course?studentId=1
+```
+
+* Get the average grade of a student
+```
+http://localhost:8787/school-api/v1/student/average-grade?studentId=1
+```
+
+* Get student's grade of a course.
+```
+http://localhost:8787/school-api/v1/student/course-grade?studentId=1
+```
+
+* Create a student
+```
+http://localhost:8787/school-api/v1/student/create?familyName=Camacho%firstName=Abel&creditCapacity=10
+```
 
 
-Othe functionalities of the API are get all courses from a student, get the average grade of a student, and get the grade of a course.
-It is aslo possible to create a student, update the information of a student, and also create a course.
 
+* Update the information of a student
+```
+http://localhost:8787/school-api/v1/student/update?studentId=1&familyName=Camacho&firstName=Leo
+```
+
+*  Create a course.
+```
+http://localhost:8787/school-api/v1/student/data?courseName=Calculus&startDate=2021-01-01&endDate=2021-01-10&capacity=3&credit=3
+```
+
+
+*  Add a student to a  course.
+```
+http://localhost:8787/school-api/v1/course/add-student?studentId=1&courseId=1
+```
 
